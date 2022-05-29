@@ -6,6 +6,8 @@ import {
   BrowserRouter as Router,
 } from "react-router-dom";
 import Routing from './router';
+import store from './redux/store';
+import {Provider} from 'react-redux';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -23,18 +25,18 @@ function App() {
   }, []);
 
   return (
-    <>
+    <Provider store={store}>
       {currentUser ? <HomeComponent /> : <LoginPage />}
-    </>
+    </Provider>
   );
 }
 
 const HomeComponent = () => {
   return(
-    <Router>
-        <NavBar />
-        <Routing />
-    </Router>
+      <Router>
+          <NavBar />
+          <Routing />
+      </Router>
 
   )
 }

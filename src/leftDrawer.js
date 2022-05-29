@@ -36,9 +36,9 @@ const LeftDrawer = ({defaultTab}) => {
                 {tabsData.map((i) => {
                     return(
                         <>
-                            <ListItemButton onClick={() => handleClickTab(i.name)} style={{backgroundColor: tab === i.name ? '#44ab60' : '#fff', borderBottom:'1px solid #44ab60'}}>
+                            <ListItemButton onClick={() => handleClickTab(i.name)} style={{backgroundColor: tab === i.name ? '#b8c1ec' : '#fff', borderBottom:'1px solid #b8c1ec'}}>
                                 <ListItemIcon>
-                                    <ListItemText style={{display:'flex', flexDirection:'row', alignItems:'center', color:tab === i.name ? '#fff' : '#44ab60'}}>{i.icon}{i.name}</ListItemText>
+                                    <ListItemText style={{display:'flex', flexDirection:'row', alignItems:'center', color:tab === i.name ? '#fff' : '#b8c1ec'}}>{i.icon}{i.name}</ListItemText>
                                 </ListItemIcon>
                             </ListItemButton>
                         </>
