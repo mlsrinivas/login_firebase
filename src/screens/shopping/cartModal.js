@@ -11,8 +11,11 @@ import Select from '@mui/material/Select';
 const CartModal = ({openModal, onCloseModal}) => {
 
     const cartData = useSelector(state => state.cartReducer.cart)
-    console.log(cartData, 'cartDatacartData')
-
+    const totalAmt = 0;
+    const reduceFun = cartData.reduce((totalAmt, obj) => {
+        return totalAmt += parseInt(obj.price)
+    }, 0)
+    
     return(
         <Grid>
             <Modal
@@ -27,7 +30,8 @@ const CartModal = ({openModal, onCloseModal}) => {
                     return <EachItem item={item} key={index}/>
                 })}
                 </>
-                
+
+                <p>Total: {`$${reduceFun.toFixed(2)}`}</p>
                 <Button variant="contained" onClick={onCloseModal} style={{marginTop: 20, backgroundColor:'#FF8E3C'}}>Checkout</Button>
             </Grid>
             </Modal>
