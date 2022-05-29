@@ -10,7 +10,7 @@ import GoogleIcon from '@mui/icons-material/Google';
 const useStyles = makeStyles(theme => ({
     notchedOutline: {
       borderWidth: "3px",
-      borderColor: "#44ab60 !important",
+      borderColor: "#b8c1ec !important",
     }
 }));
 
@@ -72,7 +72,7 @@ const LoginPage = () => {
                 getFieldProps
             }) => (
                 <form onSubmit={handleSubmit}>
-                    <Grid style={{display:'flex', justifyContent:'center', alignItems:'center', height: '100vh', width:'100%', flex:1, backgroundColor:'#44ab60'}}>
+                    <Grid style={{display:'flex', justifyContent:'center', alignItems:'center', height: '100vh', width:'100%', flex:1, backgroundColor:'#b8c1ec'}}>
                         <Grid style={{height: 500, width: 300, backgroundColor:'#FFF', borderRadius: 30, padding: 20}}>
                             <TextField 
                                 id="outlined-basic" 
@@ -107,13 +107,13 @@ const LoginPage = () => {
                             />
                             <p style={{color:'red', fontSize:12, paddingLeft: 15}}>{touched.password && errors.password ? errors.password : null}</p>
                             <Grid style={{alignItems:'center', justifyContent:'center', display:'flex', marginTop: 10}}>
-                                <Button variant="contained" type="submit" style={{color:'#FFF', backgroundColor:'#44ab60', height: 40, width: 230}}>Login</Button>
+                                <Button variant="contained" type="submit" style={{color:'#FFF', backgroundColor:'#b8c1ec', height: 40, width: 230}}>Login</Button>
                             </Grid>
                             <Grid style={{alignItems:'center', justifyContent:'center', display:'flex', marginTop: 10}}>
-                                <Button variant="contained" onClick={handleSingUp} style={{color:'#FFF', backgroundColor:'#44ab60', height: 40, width: 230}}>Signup</Button>
+                                <Button variant="contained" onClick={handleSingUp} style={{color:'#FFF', backgroundColor:'#b8c1ec', height: 40, width: 230}}>Signup</Button>
                             </Grid>
-                            <div style={{borderTop:'3px solid #44ab60', marginTop: 20}}></div>
-                            <GoogleIcon onClick={handleGoogleSignIn} style={{color:'#44ab60', cursor: 'pointer', padding: 100,}}/>
+                            <div style={{borderTop:'3px solid #b8c1ec', marginTop: 20}}></div>
+                            <GoogleIcon onClick={handleGoogleSignIn} style={{color:'#b8c1ec', cursor: 'pointer', padding: 100,}}/>
                         </Grid>
                     </Grid>
                 </form>
